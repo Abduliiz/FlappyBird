@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 
 public class LogicManager : MonoBehaviour
@@ -11,12 +12,10 @@ public class LogicManager : MonoBehaviour
     public Text scoretext;
     public GameObject gameOverScreen;
     private AudioSource aud;
-    public GameObject gameStart;
 
     void Start()
     {
 
-        gameStart.SetActive(true);
         aud = GetComponent<AudioSource>();
     }
 

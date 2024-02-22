@@ -20,6 +20,7 @@ public class BirdScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         isAlive = true;
         manager = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicManager>();
         aud = GetComponent<AudioSource>();  
@@ -63,6 +64,7 @@ public class BirdScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (isAlive == true)
         manager.gameOver();
         isAlive = false;
     }
