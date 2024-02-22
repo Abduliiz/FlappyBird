@@ -10,6 +10,16 @@ public class LogicManager : MonoBehaviour
     public int playerScore;
     public Text scoretext;
     public GameObject gameOverScreen;
+    private AudioSource aud;
+    public GameObject gameStart;
+
+    void Start()
+    {
+
+        gameStart.SetActive(true);
+        aud = GetComponent<AudioSource>();
+    }
+
 
 
     [ContextMenu("Increase Score")]
@@ -27,7 +37,9 @@ public class LogicManager : MonoBehaviour
 
     public void gameOver()
     {
+        aud.Play();
         gameOverScreen.SetActive(true);
+   
 
     }
 }
